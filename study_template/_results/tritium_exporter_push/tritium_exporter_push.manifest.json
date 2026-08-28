@@ -1,0 +1,33 @@
+{
+  "study": "tritium_exporter_push",
+  "toolkit_version": "0.1.0",
+  "seed": 20260726,
+  "stamp": "2026-08-22T03:26:49Z",
+  "public": true,
+  "registration": {
+    "question": "At what net TBR does the breeder become a tritium exporter?",
+    "hypothesis": "Surplus is linear in (net_TBR - 1); exporter above net_TBR ~ 1.2.",
+    "method": "surplus law (core) over a net-TBR ladder; blanket TBR cross-check (neutronics).",
+    "gate": "net exporter = surplus >= 1.0 kg-T/fpy",
+    "tags": [
+      "breeder",
+      "tritium",
+      "surplus"
+    ]
+  },
+  "n_rows": 7,
+  "columns": [
+    "net_tbr",
+    "t_burn_kg_fpy",
+    "surplus_kg_fpy",
+    "exporter"
+  ],
+  "tier1_byte_hash": "f6dd0c3ee45464f012a1abb4e479fb52b15636f8aab95f1b87f70d58d0ffd28c",
+  "tier2_tolerances": {
+    "t_burn_kg_fpy": {
+      "value": 4.97,
+      "atol": 0.05
+    }
+  },
+  "verdict": null
+}

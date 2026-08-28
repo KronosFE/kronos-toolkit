@@ -1,0 +1,34 @@
+{
+  "study": "coil_buildability",
+  "toolkit_version": "0.1.0",
+  "seed": 20260726,
+  "stamp": "2026-08-22T03:26:52Z",
+  "public": true,
+  "registration": {
+    "question": "Up to what on-coil field is the HTS plug coil buildable within REBCO allowables?",
+    "hypothesis": "Peak-fiber stress crosses the REBCO allowable between 17 and 23 T.",
+    "method": "thick-wall Lame peak-fiber surrogate (hifi.struct_fea) over a field ladder.",
+    "gate": "buildable = peak-fiber stress <= 660.0 MPa (REBCO allowable)",
+    "tags": [
+      "burner",
+      "coil",
+      "structural"
+    ]
+  },
+  "n_rows": 5,
+  "columns": [
+    "B_T",
+    "magnetic_pressure_MPa",
+    "peak_fiber_stress_MPa",
+    "peak_fiber_factor",
+    "buildable"
+  ],
+  "tier1_byte_hash": "ab0a574b2a68794d399b96f16a3ffd249187ef287a19a9fb91b3e4242c0d452d",
+  "tier2_tolerances": {
+    "peak_fiber_factor": {
+      "value": 0.785,
+      "atol": 1e-09
+    }
+  },
+  "verdict": null
+}

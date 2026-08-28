@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kronos-toolkit"
+version = "0.1.0"
+description = "Kronos Research Toolkit — the versioned, anchor-tested physics engine behind the Kronos breeder and burner designs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Kronos Fusion Energy" }]
+keywords = ["fusion", "tokamak", "tandem-mirror", "neutronics", "reproducibility"]
+dependencies = ["numpy>=1.21", "scipy>=1.7"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.4"]
+neutronics = ["openmc"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+kronos-viz = "kronos_toolkit.viz.cli:main"
+
+[tool.setuptools]
+packages = [
+    "kronos_toolkit",
+    "kronos_toolkit.core",
+    "kronos_toolkit.uq",
+    "kronos_toolkit.neutronics",
+    "kronos_toolkit.hifi",
+    "kronos_toolkit.verify",
+    "kronos_toolkit.report",
+    "kronos_toolkit.viz",
+]
+
+[tool.setuptools.package-data]
+"kronos_toolkit.viz" = ["templates/*.html", "templates/*.css", "templates/*.js"]
