@@ -1,6 +1,6 @@
 """DT breeder evaluator — unified from dt_evaluator.py + kronos_clean.py.
 
-Reproduces config 22021: Q 3.424, P_fus 88.7 MW, I_p 9.86 MA.
+Reproduces config 22021: Q 3.076, P_fus 85.04 MW, I_p 9.66 MA.
 """
 import numpy as np
 from .constants import (
